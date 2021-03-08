@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+  color: white;
+}
+
+.header {
+  position: absolute;
+  z-index: 100;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  max-width: 1790px;
+  top: 28px;
+  left: 56px;
+}
+
+.header a {
+  display: inline-block;
+  background: #e50914;
+  color: white;
+  align-self: flex-start;
+  padding: 8px 18px;
+  text-decoration: none;
+  border-radius: 3px;
+}
+
+.header select {
+  display: inline-block;
+  background: black;
+  color: white;
+  align-self: flex-start;
+  padding: 8px 18px;
+  text-decoration: none;
+  border-radius: 3px;
+}
+
+.main {
+  height: 785px;
+  background: url(imgs/bg.jpg) center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  repea
+}
+
+.main-child {
+  z-index: 1;
+  display: grid;
+  justify-items: center;
+}
+
+.main h1 {
+  font-size: 64px;
+  max-width: 800px;
+  margin-bottom: 15px;
+}
+
+.main span {
+  font-size: 26px;
+}
+
+.form-cta {
+  display: grid;
+  grid-template-columns: 500px 250px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+.form-cta input {
+  padding: 20px 10px;
+  font-size: 18px;
+  font-family: sans-serif;
+}
+
+.form-cta button {
+  background: #e50914;
+  outline: none;
+  border: none;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.form-cta button ::after {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 20px;
+  background: url("imgs/seta.svg");
+  margin-left: 20px;
+}
+
+.form-cta button:hover {
+  background: #f40612;
+}
+
+.main p {
+  font-size: 19px;
+  margin-top: 40px;
+}
+
+.gradient {
+  background: rgba(0, 0, 0, 0.4);
+  background-image: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.8) 0,
+    rgba(0, 0, 0, 0) 60%,
+    rgba(0, 0, 8, 0.8) 100%
+  );
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+}
