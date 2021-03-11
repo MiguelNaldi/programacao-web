@@ -62,6 +62,7 @@ body {
 
 .main {
   height: 965px;
+  width: 2590px;
   float: none;
   background: url(imgs/bg.jpg) center no-repeat;
   -webkit-background-size: cover;
