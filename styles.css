@@ -26,6 +26,8 @@ body {
 }
 
 .header-logo {
+  width: 210px;
+  height: 60px;
   position: relative;
   display: flex;
 }
@@ -156,6 +158,11 @@ body {
     float: none;
   }
 
+  .header-logo {
+    width: 170px;
+    height: 50px;
+  }
+
   .header a {
     display: flex;
     align-self: center;
@@ -228,7 +235,8 @@ body {
   }
 
   .header-logo {
-    width: 100%;
+    width: 140px;
+    height: 32px;
   }
 
   .header a {
@@ -302,7 +310,8 @@ body {
   }
 
   .header-logo {
-    width: auto;
+    width: 120px;
+    height: 32px;
   }
 
   .header a {
