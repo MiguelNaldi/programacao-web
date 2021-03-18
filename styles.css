@@ -120,16 +120,15 @@ body {
   cursor: pointer;
 }
 
-/*.form-cta button ::after {
+.form-cta button::after {
   z-index: 5;
   content: "";
-  display: outside;
-  width: 15px;
-  height: 25px;
+  display: inline-block;
+  width: 10px;
+  height: 20px;
   background: url("imgs/seta.svg");
   margin-left: 20px;
 }
-*/
 
 .form-cta button:hover {
   background: #f40612;

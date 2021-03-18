@@ -20,8 +20,9 @@
       <div class="header-actions">
         <div class="language-picker js-language-picker">
           <form action="" class="language-picker__form">
-            <select name="language-picker-select" id="language-picker-select">
-              <option lang="de" value="pt-br">Português</option>
+            <select data-uia="language-picker" class="ui-select medium" id="undefined-select" tabindex="0" placeholder="lang-switcher">
+              <option selected="" value="/br/" data-language="pt" data-country="BR">Português</option>
+              <option value="/br-en/" data-language="en" data-country="BR">English</option></select>
             </select>
           </form>
         </div>
@@ -39,7 +40,7 @@
         </p>
         <form class="form-cta">
           <input type="text" placeholder="Email" />
-          <button>Vamos lá ></button>
+          <button>Vamos lá</button>
         </form>
       </div>
       <div class="gradient"></div>
