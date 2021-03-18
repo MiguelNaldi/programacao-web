@@ -46,6 +46,8 @@ body {
   text-decoration: none;
   border-radius: 3px;
   max-width: 100%;
+
+  justify-content: center;
 }
 
 .header select {
@@ -60,8 +62,7 @@ body {
 }
 
 .main {
-  height: 100%;
-  max-height: 990px;
+  height: 100vh;
   float: none;
   background: url(imgs/bg.jpg) center no-repeat;
   -webkit-background-size: cover;
@@ -79,7 +80,8 @@ body {
 
 .main-child {
   z-index: 1;
-  display: grid;
+  display: flex;
+  flex-direction: column;
   justify-items: center;
   min-width: none;
 }
@@ -97,6 +99,7 @@ body {
 .form-cta {
   display: grid;
   grid-template-columns: 500px 250px;
+  justify-content: center;
   margin-top: 15px;
   margin-bottom: 10px;
 }
@@ -105,6 +108,7 @@ body {
   padding: 20px 10px;
   font-size: 18px;
   font-family: sans-serif;
+  margin: 0 1px 0 24px;
 }
 
 .form-cta button {
@@ -153,6 +157,31 @@ body {
   bottom: 0;
 }
 
+@media only screen and (max-width: 800px) {
+  .form-cta {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .form-cta input {
+    padding: 15px 8px;
+    font-size: 18px;
+    width: 500px;
+    margin-left: 24px;
+    width: 60%;
+  }
+
+  .form-cta button {
+    font-size: 20px;
+    margin-top: 7px;
+    padding: 10px 8px;
+    margin-left: 30px;
+    width: 160px;
+  }
+}
+
 @media only screen and (max-width: 650px) {
   .header {
     float: none;
@@ -180,12 +209,6 @@ body {
     padding: 4px 0px;
   }
 
-  .main {
-    float: none;
-    position: absolute;
-    height: 100%;
-  }
-
   .main h1 {
     font-size: 44px;
     margin-bottom: 10px;
@@ -206,12 +229,16 @@ body {
   }
 
   .form-cta {
-    grid-template-columns: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   .form-cta input {
     padding: 15px 8px;
     font-size: 18px;
+    margin-left: 24px;
   }
 
   .form-cta button {
