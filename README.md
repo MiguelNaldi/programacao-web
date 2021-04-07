@@ -3,5 +3,3 @@
 e CSS para construção de um layout de um website. </p>
 <p> Foi desenvolvido por Luiz Miguel Naldi Dias e Luan Antônio Dias. A reprodução do site escolhido foi o <a href="https://www.netflix.com/br/">Netflix</a>.</p> 
 <p> O resultado final pode ser observado neste <a href="https://miguelnaldi.github.io/programacao-web/">link</a>. </p>
-
-Teste Commit novamente
