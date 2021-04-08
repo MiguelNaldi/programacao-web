@@ -1,12 +1,12 @@
-//alert('Voce ganhou 1 milhão de bitcoins')
+//alert("JS Funcionando")
 function logar(){
-    var email = document.getElementById("Email");
-    var senha = document.getElementById("Senha");
+    var email = document.getElementById("email");
+    var senha = document.getElementById("senha");
 
-    if (email.value == "luanzito@master.com" && senha.value == "PaiTaOn"){
-        localStorage.setItem(acesso, true);
-
-        window.location.href = "inde.html";
+    //console.log(email.value + senha.value); 
+    if (email == "admin@admin.com" && senha == "admin"){
+        localStorage.setItem("acesso", true);
+        window.location.href = "index.html"; 
     
     } else {
         alert("Usuário ou Senha Inválidos !!");
