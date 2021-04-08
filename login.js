@@ -4,12 +4,15 @@ function logar(){
     var senha = document.getElementById("senha");
 
     console.log(email.value + senha.value); 
-    if (email.value == "luanzito@master.com" && senha.value == "ReiDelas"){
+    if (email.value == "luanzito@master.com" 
+    && senha.value == "ReiDelas" 
+    && email.value == "miguelnaldi@gmail.com" 
+    && senha.value == "SenhaGrande"){
         localStorage.setItem("acesso", true);
         window.location.href = "index.html"; 
-        alert("Login Bem sucedido !!")
+        alert("Login Bem sucedido")
     
     } else {
-        alert("Usuário ou Senha Inválidos !!");
+        alert("Usuário ou Senha Inválidos");
     }
 }
