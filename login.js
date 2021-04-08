@@ -1,0 +1,1 @@
+alert('Voce ganhou 1 milhão de bitcoins')
