@@ -4,7 +4,7 @@ function logar(){
     var senha = document.getElementById("senha");
 
     console.log(email.value + senha.value); 
-    if (email.value == "admin@admin.com" && senha.value == "admin"){
+    if (email.value == "luanzito@master.com" && senha.value == "ReiDelas"){
         localStorage.setItem("acesso", true);
         window.location.href = "index.html"; 
         alert("Login Bem sucedido !!")
