@@ -10,7 +10,7 @@ function logar(){
     && senha.value == "SenhaGrande"){
         localStorage.setItem("acesso", true);
         window.location.href = "index.html"; 
-        alert("Login Bem sucedido")
+        alert("Login Bem sucedido");
     
     } else {
         alert("Usuário ou Senha Inválidos");
