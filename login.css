@@ -78,67 +78,6 @@ body {
   position: relative;
 }
 
-.main-child {
-  z-index: 1;
-  display: flex;
-  flex-direction: column;
-  justify-items: center;
-  min-width: none;
-}
-
-.main h1 {
-  font-size: 64px;
-  max-width: 800px;
-  margin-bottom: 15px;
-}
-
-.main span {
-  font-size: 26px;
-}
-
-.form-cta {
-  display: grid;
-  grid-template-columns: 500px 250px;
-  justify-content: center;
-  margin-top: 15px;
-  margin-bottom: 10px;
-}
-
-.form-cta input {
-  padding: 20px 10px;
-  font-size: 18px;
-  font-family: sans-serif;
-  margin: 0 1px 0 24px;
-}
-
-.form-cta button {
-  background: #e50914;
-  outline: none;
-  border: none;
-  color: white;
-  font-size: 30px;
-  cursor: pointer;
-}
-
-.form-cta button::after {
-  z-index: 5;
-  content: "";
-  display: inline-block;
-  width: 10px;
-  height: 20px;
-  background: url("imgs/seta.svg");
-  margin-left: 20px;
-}
-
-.form-cta button:hover {
-  background: #f40612;
-}
-
-.main p {
-  font-size: 19px;
-  margin-top: 40px;
-}
-
 .gradient {
   background: rgba(0, 0, 0, 0.4);
   background-image: linear-gradient(
@@ -156,29 +95,126 @@ body {
   bottom: 0;
 }
 
-@media only screen and (max-width: 800px) {
-  .form-cta {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
+.main-child {
+  z-index: 1;
+}
 
-  .form-cta input {
-    padding: 15px 8px;
-    font-size: 18px;
-    width: 500px;
-    margin-left: 24px;
-    width: 60%;
-  }
+.container {
+  background: white;
+  min-width: 50%;
+  min-height: 30%;
+  max-height: 100%;
+  min-height: 100%;
+  padding: 2rem;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+}
 
-  .form-cta button {
-    font-size: 20px;
-    margin-top: 7px;
-    padding: 10px 8px;
-    margin-left: 30px;
-    width: 160px;
-  }
+.container1 {
+  font-weight: 600;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+main h2 {
+  font-weight: 600;
+  margin-bottom: 2rem;
+  position: relative;
+  color: black;
+}
+
+main h2::before {
+  content: "";
+  position: absolute;
+  height: 4px;
+  width: 25px;
+  bottom: 3px;
+  left: 0;
+  border-radius: 8px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  position: relative;
+}
+
+.form-control {
+  height: 30px;
+}
+
+form .form-group:first-child {
+  margin-bottom: 1.5rem;
+}
+
+.form-group .underline::before {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  bottom: -5px;
+  left: 0;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.form-group .underline::after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  bottom: -5px;
+  left: 0;
+  background: linear-gradient(45deg, #8e2de2, #4a00e0);
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out;
+  transform-origin: left;
+}
+
+.form-group input:focus ~ .underline::after {
+  transform: scaleX(1);
+}
+
+.form-group input {
+  outline: none;
+  font-size: 0.9rem;
+  color: rgba(0, 0, 0, 0.7);
+  width: 100%;
+}
+
+.form-group input::placeholder {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.btn-primary {
+  margin-top: 2rem;
+  border: none;
+  padding: 0.4rem;
+  width: 100%;
+  background: red;
+  cursor: pointer;
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 300;
+  transition: all 0.3s ease;
+  border-radius: 6px;
+}
+
+.form-check {
+  display: flex;
+  margin-top: 1rem;
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 0.8rem;
+  justify-items: left;
+}
+
+.form-check label {
+  margin-left: 5px;
+}
+
+main @media only screen and (max-width: 800px) {
 }
 
 @media only screen and (max-width: 650px) {
@@ -213,44 +249,6 @@ body {
     margin-bottom: 10px;
     margin-top: 50px;
   }
-
-  .main span {
-    font-size: 19px;
-  }
-
-  .main p {
-    font-size: 16px;
-    margin-top: 20px;
-  }
-
-  .main-child {
-    width: 100%;
-  }
-
-  .form-cta {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .form-cta input {
-    padding: 15px 8px;
-    font-size: 18px;
-    margin-left: 24px;
-  }
-
-  .form-cta button {
-    font-size: 20px;
-    margin-top: 7px;
-    padding: 10px 8px;
-    margin-left: 30px;
-    width: 160px;
-  }
-
-  .form-cta input {
-    font-size: 16px;
-  }
 }
 
 @media only screen and (max-width: 500px) {
@@ -271,6 +269,11 @@ body {
     text-align: left;
   }
 
+  .main p {
+    font-size: 19px;
+    margin-top: 40px;
+  }
+
   .header select {
     border-radius: 2px;
     margin-right: 10px;
@@ -279,51 +282,71 @@ body {
     margin-left: 7px;
   }
 
-  .main {
+  .container {
+    max-width: 70%;
+    min-height: none;
     float: none;
+    padding: 1.5rem;
+    padding-bottom: 8px;
+    margin-top: 35px;
+  }
+
+  .container1 {
+    margin-bottom: 0.5rem;
+  }
+
+  main h2 {
+    margin-bottom: 0.5rem;
+  }
+
+  main h2::before {
+    height: 1px;
+    width: 13px;
+    bottom: 2px;
+    border-radius: 2px;
+  }
+
+  .form-control {
+    height: 20px;
+  }
+
+  form .form-group:first-child {
+    margin-bottom: 1.5rem;
+  }
+
+  .form-group .underline::after {
+    content: "";
     position: absolute;
-    height: 100%;
-  }
-
-  .main h1 {
-    font-size: 29px;
-    margin-bottom: 10px;
-    margin-top: 50px;
-    padding: 16px;
-  }
-
-  .main span {
-    font-size: 15px;
-  }
-
-  .main p {
-    font-size: 13px;
-    margin-top: 20px;
-  }
-
-  .main-child {
+    height: 1px;
     width: 100%;
+    bottom: -5px;
+    left: 0;
+    background: linear-gradient(45deg, #8e2de2, #4a00e0);
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out;
+    transform-origin: left;
   }
 
-  .form-cta {
-    grid-template-columns: auto;
+  .form-group input {
+    font-size: 0.75rem;
   }
 
-  .form-cta input {
-    padding: 10px 8px;
-    font-size: 18px;
+  .btn-primary {
+    margin-top: 0.1rem;
+    padding: 0.2rem;
+    font-size: 0.9rem;
   }
 
-  .form-cta button {
-    font-size: 20px;
-    margin-top: 7px;
-    padding: 10px 8px;
-    margin-left: 30px;
-    width: 160px;
+  .form-check {
+    display: flex;
+    margin-top: 1rem;
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 0.8rem;
+    justify-items: left;
   }
 
-  .form-cta input {
-    font-size: 16px;
+  .form-check label {
+    margin-left: 5px;
   }
 }
 
@@ -352,51 +375,5 @@ body {
     width: 80px;
     font-size: 11px;
     margin-left: 7px;
-  }
-
-  .main {
-    float: none;
-    position: absolute;
-    height: 100%;
-  }
-
-  .main h1 {
-    font-size: 30px;
-    margin-bottom: 10px;
-    margin-top: 50px;
-  }
-
-  .main span {
-    font-size: 15px;
-  }
-
-  .main p {
-    font-size: 13px;
-    margin-top: 20px;
-  }
-
-  .main-child {
-    width: 100%;
-  }
-
-  .form-cta {
-    grid-template-columns: auto;
-  }
-
-  .form-cta input {
-    padding: 15px 8px;
-    font-size: 18px;
-  }
-
-  .form-cta button {
-    font-size: 20px;
-    margin-top: 7px;
-    padding: 10px 8px;
-    margin-left: 30px;
-    width: 160px;
-  }
-
-  .form-cta input {
-    font-size: 16px;
   }
 }

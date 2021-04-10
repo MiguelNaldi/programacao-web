@@ -7,7 +7,7 @@
     <title>
       Netflix Brasil - assistir a séries online, assistir a filmes online
     </title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="login.css" />
     <link rel="shortcut icon" href="imgs/favicon.ico" />
     <script src="login.js"></script>
     
@@ -19,27 +19,6 @@
         <img src="imgs/netflix.svg" alt="Netflix" draggable="false" />
       </div>
       
-      
-      <div class = "container">
-        <div class = "login-form">     
-            <form class = "container">
-                <div class="form-group">
-              <label for="email">Entrar </label>
-              <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Email ou numero de telefone">
-            </div>
-            <div class="form-group">
-              <input type="password" class="form-control" id="senha" placeholder="Senha">
-            </div>
-            <div class="form-group form-check">
-              <input type="checkbox" class="form-check-input" id="exampleCheck1">
-              <label class="form-check-label" for="exampleCheck1">Lembre-se de mim</label>
-            </div>
-          </form>
-          <div class="button">
-            <button onclick="logar();" class="btn btn-primary">Entrar</button>
-          </div>
-        </div>
-    </div>
 
       <div class="header-actions">
         <div class="language-picker js-language-picker">
@@ -56,16 +35,43 @@
 
     <main class="main">
       <div class="main-child">
+        <div class = "container">
+          <h2>Login</h2>
+          <div class = "login-form">     
+            <form class = "container1">
+              <div class="form-group">
+                <input type="email" class="form-control" 
+                id="email" 
+                aria-describedby="emailHelp" 
+                placeholder="Email ou numero de telefone">
+              </div>
+              <div class="form-group">
+                <input type="password" class="form-control" 
+                id="senha" 
+                placeholder="Senha">
+              </div>
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input" 
+                id="exampleCheck1">
+                <label class="form-check-label" 
+                for="exampleCheck1"><nobr>Lembre-se de mim</nobr></label>
+              </div>
+            </form>
+            <div class="button">
+              <button onclick="logar();" class="btn-primary">Entrar</button>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="gradient"></div>
     </main>
+    
+    
+    
+   
   </body>
+  
 </html>
-
-
-
-
-
 
 
 <!--
