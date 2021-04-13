@@ -4,7 +4,7 @@ e CSS para construção de um layout de um website. </p>
 
 <h1> Projeto 2 - Programação para Web </h1>
 <p> Implementando rotinas de processamento no lado cliente. </p>
-<p> Utilização da API <a href = "/"> Movies </a> </p>
+<p> Utilização da API <a href = "https://www.omdbapi.com"> OMDb API </a> </p>
 <p> Para cadastro e login, deve ser usado o email:  e senha: </p>
 
 <h2> Acesso </h2>
