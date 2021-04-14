@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>
+      Netflix Brasil - assistir a séries online, assistir a filmes online
+    </title>
+    <link rel="stylesheet" href="busca.css" />
+    <link rel="shortcut icon" href="imgs/favicon.ico" />
+    <script src="login.js"></script>
+    
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="header-logo">
+        <img src="imgs/netflix.svg" alt="Netflix" draggable="false" />
+      </div>
+      
+
+      <div class="header-actions">
+        <div class="language-picker js-language-picker">
+          <form action="" class="language-picker__form">
+            <select data-uia="language-picker" class="ui-select medium" id="undefined-select" tabindex="0" placeholder="lang-switcher">
+              <option selected="" value="/br/" data-language="pt" data-country="BR">Português</option>
+              <option value="/br-en/" data-language="en" data-country="BR">English</option></select>
+            </select>
+          </form>
+        </div>
+        <a href="index.html">Voltar</a>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="main-child">
+
+        <div id='busca'>
+            <form action="/search" class="search" method="get">
+                <input id="txtbusca" name="q" type="text" value="" 
+                placeholder="Busque por um filme" />
+                <input id="btnBusca" type="submit" value="Ok"/>
+            </form>
+            </div>
+          
+          </form>
+                 
+      </div>
+      <div class="gradient"></div>
+    </main>
+    
+    
+    
+   
+  </body>
+  
+</html>
