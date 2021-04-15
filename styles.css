@@ -79,13 +79,18 @@ body {
 }
 
 .main-child {
-  z-index: 1;
+  z-index: 10;
   display: flex;
-  flex-direction: column;
   justify-items: center;
-  min-width: none;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 
+.card{
+  display: flex;
+  align-items: center;
+}
 .main h1 {
   font-size: 64px;
   max-width: 800px;
@@ -403,8 +408,7 @@ body {
 }
 
 
-main @media only screen and (max-width: 770px) {
-}
+
 
 @media only screen and (max-width: 650px) {
   .header {
