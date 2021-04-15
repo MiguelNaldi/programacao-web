@@ -31,7 +31,7 @@
     </header>
 
     <main class="main">
-      <div class="main-child">
+      <div class="main-child" data-js="main-child">
         <h1>API de busca para filmes.</h1>
         <span>Assista onde quiser. Cancele quando quiser.</span>
         <p>
@@ -39,11 +39,15 @@
           assinatura.
         </p>
         <form class="form-cta">
-          <input type="text" placeholder="Email" />
-          <button class = "btn btn-primary" type= "submit">Pesquisar</button>
+          <input type="text" placeholder="Email" data-js="formInput" />
+          <button class="btn btn-primary" data-js="formButton" type="submit">Pesquisar</button>
         </form>
+        <div class="card" data-js="card"></div>
       </div>
       <div class="gradient"></div>
     </main>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="api.js"></script>
   </body>
 </html>
