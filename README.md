@@ -5,7 +5,7 @@ e CSS para construção de um layout de um website. </p>
 <h1> Projeto 2 - Programação para Web </h1>
 <p> Implementando rotinas de processamento no lado cliente. </p>
 <p> Utilização da API <a href = "https://www.omdbapi.com"> OMDb API </a> </p>
-<p> Para cadastro e login, deve ser usado o email:  e senha: </p>
+<p> Para cadastro e login, deve ser usado o email: eve.holt@reqres.in  e senha: password </p>
 
 <h2> Acesso </h2>
 <p> Foi desenvolvido por Luiz Miguel Naldi Dias e Luan Antônio Dias. A reprodução do site escolhido foi o <a href="https://www.netflix.com/br/">Netflix</a>.</p> 
