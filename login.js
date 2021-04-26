@@ -1,5 +1,6 @@
     const $inputEmail = document.querySelector('[data-js="inputEmail"]')
     const $inputPassword = document.querySelector('[data-js="inputPassword"]')
+    const $warningText = querySelector('[data-js="warningText"]')
 
     const LogIn = async () => {
         const data =  {
@@ -17,8 +18,10 @@
             window.location.href = "api.html"
             
         }catch (err) {
+            
+            $warningText.setAtribute("style", "display: block")
 
-            alert("Usuário ou senha inválidos")
+           // alert("Usuário ou senha inválidos")
         }
     }
  
