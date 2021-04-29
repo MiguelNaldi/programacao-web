@@ -110,6 +110,11 @@ body {
   border-radius: 8px;
 }
 
+.warningText {
+  color: #ffffff;
+  display: none;
+}
+
 .container1 {
   font-weight: 600;
   margin-bottom: 2rem;
@@ -133,7 +138,7 @@ main h2::before {
   border-radius: 8px;
 }
 
-<style type="text/css" > #busca {
+#busca {
   margin: 0 auto;
   padding: 0;
 }

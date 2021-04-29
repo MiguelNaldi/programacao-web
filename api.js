@@ -1,5 +1,6 @@
 const $form = document.querySelector('[data-js="formButton"]')
 const $formInput = document.querySelector('[data-js="formInput"]')
+const $warningText = document.querySelector('[data-js="warningText"]')
 
 $form.addEventListener("click", event => pesquisarFilme(event));
 
@@ -12,15 +13,24 @@ function pesquisarFilme(event){
 
 const buscarFilmes = async filmePesquisa => {
     try{
+        const token = localStorage.getItem("@token:netflix")
+
+        if(!token){
+            alert("Faça login antes de buscar")
+            window.location.href = "login.html"
+            return
+        }
+
         const response = await axios.get(`https://www.omdbapi.com/?s=${filmePesquisa}&apikey=79e3fb1d`)
 
         const { Search } = response.data
 
         const filmes = [...Search]
         showFilmes(filmes)
-
+        $warningText.setAttribute("style", "display: none")
+        
     }catch(error){
-        alert("Filme não encontrado")
+        $warningText.setAttribute("style", "display: block")
         console.log(error)
     }
 }
