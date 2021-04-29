@@ -214,13 +214,9 @@ form .form-group:first-child {
   margin-left: 5px;
 }
 
-.warningText{
+.warningText {
   color: #c53030;
   display: none;
-  
-}
-
-main @media only screen and (max-width: 800px) {
 }
 
 @media only screen and (max-width: 650px) {
