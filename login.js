@@ -4,12 +4,12 @@
 
     const LogIn = async () => {
         const data =  {
-            "email":  $inputEmail.value,
+            "username":  $inputEmail.value,
             "password": $inputPassword.value
         }
 
         try {
-            const response = await axios.post("https://reqres.in/api/login", data)
+            const response = await axios.post("http://localhost:3001/api/authenticate", data)
             const { token } = response.data
 
             localStorage.setItem("@token:netflix", token)
