@@ -1,0 +1,373 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body,
+html {
+  height: 100%;
+}
+
+body {
+  font-family: sans-serif;
+  color: white;
+}
+
+.header {
+  box-sizing: border-box;
+  position: absolute;
+  z-index: 100;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style-type: none;
+  padding: 24px;
+}
+
+.header-logo {
+  width: 210px;
+  height: 60px;
+  position: relative;
+  display: flex;
+}
+
+.header-actions {
+  display: flex;
+  justify-content: right;
+}
+
+.header a {
+  display: flex;
+  background: #e50914;
+  color: white;
+  align-self: flex-start;
+  padding: 8px 18px;
+  text-decoration: none;
+  border-radius: 3px;
+  max-width: 100%;
+
+  justify-content: center;
+}
+
+.header select {
+  display: inline-block;
+  background: black;
+  color: white;
+  align-self: flex-start;
+  padding: 8px 18px;
+  text-decoration: none;
+  border-radius: 3px;
+  margin-right: 10px;
+}
+
+.main {
+  height: 100vh;
+  float: none;
+  background: url(imgs/bg.jpg) center no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center;
+  background-clip: padding-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+
+.gradient {
+  background: rgba(0, 0, 0, 0.4);
+  background-image: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.8) 0,
+    rgba(0, 0, 0, 0) 60%,
+    rgba(0, 0, 8, 0.8) 100%
+  );
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.main-child {
+  z-index: 1;
+}
+
+.container {
+  background: white;
+  min-width: 50%;
+  min-height: 30%;
+  max-height: 100%;
+  min-height: 100%;
+  padding: 2rem;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+}
+
+.container1 {
+  font-weight: 600;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.form-group {
+  position: relative;
+}
+
+.form-control {
+  height: 30px;
+}
+
+form .form-group:first-child {
+  margin-bottom: 1.5rem;
+}
+
+.form-group .underline::before {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  bottom: -5px;
+  left: 0;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.form-group .underline::after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  bottom: -5px;
+  left: 0;
+  background: linear-gradient(45deg, #8e2de2, #4a00e0);
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out;
+  transform-origin: left;
+}
+
+.form-group input:focus ~ .underline::after {
+  transform: scaleX(1);
+}
+
+.form-group input {
+  outline: none;
+  font-size: 0.9rem;
+  color: rgba(0, 0, 0, 0.7);
+  width: 100%;
+}
+
+.form-group input::placeholder {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.btn-add {
+  border: none;
+  padding: 0.2rem;
+  width: 100%;
+  background: red;
+  cursor: pointer;
+  color: white;
+  font-size: 0.8rem;
+  font-weight: 400;
+  transition: all 0.3s ease;
+  border-radius: 5px;
+  margin-bottom: px;
+}
+
+.btn-post {
+  margin-top: 5rem;
+  border: none;
+  padding: 0.4rem;
+  width: 100%;
+  background: red;
+  cursor: pointer;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 300;
+  transition: all 0.3s ease;
+  border-radius: 6px;
+}
+
+.form-check {
+  display: flex;
+  margin-top: 1rem;
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 0.8rem;
+  justify-items: left;
+}
+
+.form-check label {
+  margin-left: 5px;
+}
+
+.warningText {
+  color: #c53030;
+  display: none;
+}
+
+@media only screen and (max-width: 650px) {
+  .header {
+    float: none;
+  }
+
+  .header-logo {
+    width: 170px;
+    height: 50px;
+  }
+
+  .header a {
+    display: flex;
+    align-self: center;
+    border-radius: 3px;
+    width: 20px;
+    font-size: 12px;
+  }
+
+  .header select {
+    border-radius: 2px;
+    margin-right: 10px;
+    width: 80px;
+    font-size: 15px;
+    margin-left: 5px;
+    padding: 4px 0px;
+  }
+
+  .main h1 {
+    font-size: 44px;
+    margin-bottom: 10px;
+    margin-top: 50px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .header {
+    float: none;
+    display: flex;
+    text-align: left;
+  }
+
+  .header-logo {
+    width: 140px;
+    height: 32px;
+  }
+
+  .header a {
+    font-size: 11px;
+    padding: 10px 20px;
+    text-align: left;
+  }
+
+  .main p {
+    font-size: 19px;
+    margin-top: 40px;
+  }
+
+  .header select {
+    border-radius: 2px;
+    margin-right: 10px;
+    width: 80px;
+    font-size: 13px;
+    margin-left: 7px;
+  }
+
+  .container {
+    max-width: 70%;
+    min-height: none;
+    float: none;
+    padding: 1.5rem;
+    padding-bottom: 8px;
+    margin-top: 35px;
+  }
+
+  .container1 {
+    margin-bottom: 0.5rem;
+  }
+
+  main h2 {
+    margin-bottom: 0.5rem;
+  }
+
+  main h2::before {
+    height: 1px;
+    width: 13px;
+    bottom: 2px;
+    border-radius: 2px;
+  }
+
+  .form-control {
+    height: 20px;
+  }
+
+  form .form-group:first-child {
+    margin-bottom: 1.5rem;
+  }
+
+  .form-group .underline::after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    bottom: -5px;
+    left: 0;
+    background: linear-gradient(45deg, #8e2de2, #4a00e0);
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out;
+    transform-origin: left;
+  }
+
+  .form-group input {
+    font-size: 0.75rem;
+  }
+
+  .btn-primary {
+    margin-top: 0.1rem;
+    padding: 0.2rem;
+    font-size: 0.9rem;
+  }
+
+  .form-check {
+    display: flex;
+    margin-top: 1rem;
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 0.8rem;
+    justify-items: left;
+  }
+
+  .form-check label {
+    margin-left: 5px;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .header {
+    float: none;
+    display: flex;
+    text-align: left;
+    padding: 12px;
+  }
+
+  .header-logo {
+    width: 120px;
+    height: 32px;
+  }
+
+  .header a {
+    font-size: 11px;
+    padding: 9px 19px;
+    text-align: left;
+  }
+
+  .header select {
+    border-radius: 2px;
+    margin-right: 10px;
+    width: 80px;
+    font-size: 11px;
+    margin-left: 7px;
+  }
+}
