@@ -10,6 +10,7 @@ e CSS para construção de um layout de um website. </p>
 <h1> Projeto 3 - Express.js </h1>
 <p> Implementação das funcionalidades no lado servidor de uma aplicaçãoo web. </p>
 <p> Com Login, Cadastro de Usuários, Publicação de conteúdos para o administrador e Busca de conteúdo.</p>
+<p> Link para a API: <a href="https://github.com/MiguelNaldi/api-utfpr-webdev">link</a>. </p>
 
 <h2> Acesso </h2>
 <p> Foi desenvolvido por Luiz Miguel Naldi Dias e Luan Antônio Dias. A reprodução do site escolhido foi o <a href="https://www.netflix.com/br/">Netflix</a>.</p> 

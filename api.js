@@ -50,21 +50,4 @@ function showFilmes(filmes){
     
         $card.appendChild($innerCard)
 
-    
-    
-    // Retorna até 10 filmes
-  
-    // filmes.forEach((film) => {
-    //     const $innerCard = document.createElement("div");
-    //     $innerCard.setAttribute("class", "card")
-    //     $innerCard.innerHTML = `
-    //         <div style="z-index: 90">
-    //             <h1>${film.Title} - ${film.Year}</h1>
-    //             <img src=${film.Poster} alt="${film.Title}"/>
-    //         </div>
-    //     `
-    
-    //     $card.appendChild($innerCard)
-    // })
-
 }
