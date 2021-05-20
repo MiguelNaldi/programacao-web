@@ -12,9 +12,9 @@ const Cadastro = async () => {
     const data =  {
         "email":  $inputEmail.value,
         "password": $inputPassword.value,
-        "userName": $inputuserName.value,
+        "username": $inputuserName.value,
         "firstName": $inputNome.value,
-        "sobrenome": $inputSobrenome.value,
+        "lastName": $inputSobrenome.value,
         "administrador": $inputAdm.checked
 
 
