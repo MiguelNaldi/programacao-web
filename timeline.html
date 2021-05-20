@@ -26,7 +26,7 @@
             </select>
           </form>
         </div>
-        <a href="login.html">Voltar</a>
+        <a href="api.html">Voltar</a>
       </div>
     </header>
 
@@ -37,13 +37,13 @@
             <div class = "login-form">     
               <form class = "container1">
                 <div class="form-group">
-                  <input type="title" class="form-control" data-js="inputEmail"
+                  <input type="title" class="form-control" data-js="inputTitle"
                   id="email" 
                   aria-describedby="emailHelp" 
                   placeholder="Título">
                 </div>
                 <div class="form-group">
-                  <input type="text" class="form-control" data-js="inputPassword"
+                  <input type="text" class="form-control" data-js="inputText"
                   id="senha" 
                   placeholder="Texto">
                 </div>
@@ -51,10 +51,11 @@
                 </div>
               </form>
               <div class="buttonImg">
-                <button onclick="LogIn();" class="btn-add">Adicionar Imagem +</button>
+                <input type="file" accept="image/png,image/jpeg" data-js="inputImg">
+              </div>
               </div>
               <div class="buttonPost">
-                <button onclick="LogIn();" class="btn-post">Post</button>
+                <button onclick="postar()" class="btn-post">Post</button>
               </div>
             </div>
       </div>
@@ -63,6 +64,6 @@
     </main>
 
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="api.js"></script>
+    <script src="timeline.js"></script>
   </body>
 </html>
