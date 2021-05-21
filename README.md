@@ -14,4 +14,4 @@ e CSS para construção de um layout de um website. </p>
 
 <h2> Acesso </h2>
 <p> Foi desenvolvido por Luiz Miguel Naldi Dias e Luan Antônio Dias. A reprodução do site escolhido foi o <a href="https://www.netflix.com/br/">Netflix</a>.</p> 
-<p> O resultado final pode ser observado neste <a href="https://miguelnaldi.github.io/programacao-web/">link</a>. </p>
+<p> O resultado final pode ser observado no Github Pages por este <a href="https://miguelnaldi.github.io/programacao-web/">link</a>. </p>
