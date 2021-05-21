@@ -14,9 +14,8 @@ const Cadastro = async () => {
     username: $inputuserName.value,
     firstName: $inputNome.value,
     lastName: $inputSobrenome.value,
-    administrator: $inputAdm.checked,
+    administrator: Boolean($inputAdm.checked),
   };
-  console.log(data);
 
   try {
     const response = await axios.post(
@@ -27,8 +26,9 @@ const Cadastro = async () => {
 
     localStorage.setItem("@token:netflix", token);
 
-    window.location.href = "login.html";
+    window.location.href = "timeline.html";
   } catch (err) {
+    console.log(err);
     $warningText.setAttribute("style", "display: block");
   }
 };
