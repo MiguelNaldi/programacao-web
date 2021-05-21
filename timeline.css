@@ -6,6 +6,7 @@
 body,
 html {
   height: 100%;
+  background: black;
 }
 
 body {
@@ -75,7 +76,6 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
-  position: relative;
 }
 
 .gradient {
@@ -114,6 +114,59 @@ body {
   font-weight: 600;
   margin-bottom: 2rem;
   position: relative;
+}
+
+.card {
+  display: flex;
+  position: relative;
+  align-self: center;
+  align-items: center;
+
+  width: 500px;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.innerCard {
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  text-align: center;
+  background: #f8f8f8;
+  border-radius: 8px;
+}
+
+.search-post {
+  margin-top: 30px;
+  background: white;
+  min-width: 50%;
+  min-height: 30%;
+  max-height: 100%;
+  min-height: 100%;
+  padding: 2rem;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+}
+
+.image {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  margin-bottom: 20px;
+  border-radius: 20px;
+}
+
+.title {
+  color: black;
+}
+
+.text {
+  width: 400px;
+  word-break: break-all;
+  display: flex;
+  margin-bottom: 20px;
+  justify-content: center;
+  color: black;
 }
 
 .form-group {
@@ -224,18 +277,6 @@ label {
 .warningText {
   color: #c53030;
   display: none;
-}
-
-.search-post {
-  margin-top: 30px;
-  background: white;
-  min-width: 50%;
-  min-height: 30%;
-  max-height: 100%;
-  min-height: 100%;
-  padding: 2rem;
-  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
-  border-radius: 8px;
 }
 
 @media only screen and (max-width: 650px) {

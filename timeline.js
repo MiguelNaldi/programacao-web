@@ -2,11 +2,56 @@ const $inputTitle = document.querySelector('[data-js="inputTitle"]');
 const $inputText = document.querySelector('[data-js="inputText"]');
 const $inputImg = document.querySelector('[data-js="inputImg"]');
 const $warningText = document.querySelector('[data-js="warningText"]');
+const token = localStorage.getItem("@token:netflix");
+const $card = document.querySelector('[data-js="card"]');
+const $inputSearch = document.querySelector('[data-js="inputSearch"]');
+var data = [];
+
+$inputSearch.addEventListener("change", (event) =>
+  findPosts(event.target.value)
+);
+
+function findPosts(value) {
+  axios
+    .get(`http://localhost:3001/api/post/find/${value}`, {
+      headers: {
+        Authorization: token,
+      },
+    })
+    .then((response) => {
+      data = [...response.data];
+      renderPosts(data);
+    })
+    .catch((error) => {
+      console.error(error);
+    });
+}
+findPosts("");
+
+function renderPosts(data) {
+  $card.innerHTML = "";
+  data.forEach((post) => {
+    const $innerCard = document.createElement("div");
+    $innerCard.setAttribute("class", "innerCard");
+    $innerCard.setAttribute("data-js", "innerCard");
+    console.log($innerCard);
+    const img = new Image();
+    img.src = post.image.url;
+    img.className = "image";
+    $innerCard.innerHTML = `
+                <div style="z-index: 90">
+                    <h1 class="title"> ${post.title}</h1>
+                    <p class="text">${post.text}</p>
+                </div>
+            `;
+
+    $card.appendChild($innerCard);
+    $card.appendChild(img);
+  });
+}
 
 const postar = async () => {
   const formData = new FormData();
-
-  const token = localStorage.getItem("@token:netflix");
 
   const data = {
     title: $inputTitle.value,
@@ -21,7 +66,6 @@ const postar = async () => {
     formData.append("images", image);
   });
 
-  console.log(token);
   try {
     axios
       .post("http://localhost:3001/api/post/create/", formData, {
@@ -48,19 +92,3 @@ const postar = async () => {
     fileChosen.textContent = this.files[0].name;
   });
 };
-
-function showFilmes(filmes) {
-  const $card = document.querySelector('[data-js="card"]');
-
-  // Retorna apenas 1 filme
-
-  const $innerCard = document.createElement("div");
-  $innerCard.setAttribute("class", "card");
-  $innerCard.innerHTML = `
-            <div style="z-index: 90">
-                <h1>${filmes[0].Title} - ${filmes[0].Year}</h1>
-                <img src=${filmes[0].Poster} alt="${filmes[0].Title}"/>
-            </div>
-        `;
-  $card.appendChild($innerCard);
-}
