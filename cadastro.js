@@ -12,8 +12,7 @@ const Cadastro = async () => {
     email: $inputEmail.value,
     password: $inputPassword.value,
     username: $inputuserName.value,
-    firstName: $inputNome.value,
-    lastName: $inputSobrenome.value,
+    name: $inputNome.value,
     administrator: Boolean($inputAdm.checked),
   };
 
