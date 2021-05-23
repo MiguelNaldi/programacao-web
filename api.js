@@ -1,6 +1,7 @@
 const $form = document.querySelector('[data-js="formButton"]');
 const $formInput = document.querySelector('[data-js="formInput"]');
 const $warningText = document.querySelector('[data-js="warningText"]');
+const token = localStorage.getItem("@token:netflix");
 
 $form.addEventListener("click", (event) => pesquisarFilme(event));
 
@@ -11,10 +12,12 @@ function pesquisarFilme(event) {
   $formInput.value = "";
 }
 
+if (!token) {
+  window.location.href = "login.html";
+}
+
 const buscarFilmes = async (filmePesquisa) => {
   try {
-    const token = localStorage.getItem("@token:netflix");
-
     if (!token) {
       alert("Faça login antes de buscar");
       window.location.href = "login.html";

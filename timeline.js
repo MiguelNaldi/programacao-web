@@ -11,6 +11,10 @@ $inputSearch.addEventListener("change", (event) =>
   findPosts(event.target.value)
 );
 
+if (!token) {
+  window.location.href = "login.html";
+}
+
 function findPosts(value) {
   axios
     .get(`http://localhost:3001/api/post/find/${value}`, {

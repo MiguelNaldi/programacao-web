@@ -19,9 +19,10 @@ const Cadastro = async () => {
 
   try {
     const response = await axios.post(
-      "http://localhost:3001/api/register",
+      "http://localhost:3000/auth/register",
       data
     );
+
     const token = `Bearer ${response.data.token}`;
 
     localStorage.setItem("@token:netflix", token);
