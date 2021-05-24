@@ -21,7 +21,7 @@ const Cadastro = async () => {
       "http://localhost:3000/auth/register",
       data
     );
-
+    console.log(response);
     const token = `Bearer ${response.data.token}`;
 
     localStorage.setItem("@token:netflix", token);

@@ -17,13 +17,14 @@ if (!token) {
 
 function findPosts(value) {
   axios
-    .get(`http://localhost:3001/api/post/find/${value}`, {
+    .get(`http://localhost:3000/findpost/${value}`, {
       headers: {
         Authorization: token,
       },
     })
     .then((response) => {
       data = [...response.data];
+      console.log(response);
       renderPosts(data);
     })
     .catch((error) => {
@@ -35,6 +36,7 @@ findPosts("");
 function renderPosts(data) {
   $card.innerHTML = "";
   data.forEach((post) => {
+    console.log(post);
     const $innerCard = document.createElement("div");
     $innerCard.setAttribute("class", "innerCard");
     $innerCard.setAttribute("data-js", "innerCard");
@@ -72,14 +74,13 @@ const postar = async () => {
 
   try {
     axios
-      .post("http://localhost:3001/api/post/create/", formData, {
+      .post("http://localhost:3000/postagens/", formData, {
         headers: {
           Authorization: token,
         },
       })
       .then((response) => {
         alert("Successful post");
-        console.log(response);
       })
       .catch(function (error) {
         alert("User is not authorized");

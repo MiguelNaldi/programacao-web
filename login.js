@@ -13,6 +13,7 @@ const LogIn = async () => {
       "http://localhost:3000/auth/authenticate",
       data
     );
+
     const token = `Bearer ${response.data.token}`;
 
     localStorage.setItem("@token:netflix", token);
