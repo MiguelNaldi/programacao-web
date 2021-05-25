@@ -42,7 +42,7 @@ function renderPosts(data) {
     $innerCard.setAttribute("data-js", "innerCard");
     console.log($innerCard);
     const img = new Image();
-    img.src = post.image.url;
+    img.src = post.image;
     img.className = "image";
     $innerCard.innerHTML = `
                 <div style="z-index: 90">
